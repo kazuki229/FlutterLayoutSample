@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
-void main() => runApp(new MyApp());
+void main() {
+  runApp(new MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -106,6 +109,33 @@ class MyApp extends StatelessWidget {
         )
     );
 
+    Widget expandedSection = Center(
+        child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+                Expanded(
+                    child: Image.asset(
+                        'images/pic1.jpg',
+                        fit: BoxFit.fill,
+                    ),
+                ),
+                Expanded(
+                    flex: 2,
+                    child: Image.asset(
+                        'images/pic2.jpg',
+                        fit: BoxFit.fill,
+                    ),
+                ),
+                Expanded(
+                    child: Image.asset(
+                        'images/pic3.jpg',
+                        fit: BoxFit.fill,
+                    ),
+                )
+            ]
+        )
+    );
+
     return MaterialApp(
       title: 'Flutter Demo',
       home: Scaffold(
@@ -124,6 +154,7 @@ class MyApp extends StatelessWidget {
             textSection,
             rowSection,
             columnSection,
+            expandedSection,
           ],
         ),
       ),
