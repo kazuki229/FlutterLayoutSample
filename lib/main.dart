@@ -136,6 +136,19 @@ class MyApp extends StatelessWidget {
         )
     );
 
+    Widget packedRow = Center(
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(Icons.star, color: Colors.green[500]),
+          Icon(Icons.star, color: Colors.green[500]),
+          Icon(Icons.star, color: Colors.green[500]),
+          Icon(Icons.star, color: Colors.black),
+          Icon(Icons.star, color: Colors.black),
+        ],
+      ),
+    );
+
     return MaterialApp(
       title: 'Flutter Demo',
       home: Scaffold(
@@ -155,6 +168,7 @@ class MyApp extends StatelessWidget {
             rowSection,
             columnSection,
             expandedSection,
+            packedRow,
           ],
         ),
       ),
