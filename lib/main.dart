@@ -84,6 +84,17 @@ class MyApp extends StatelessWidget {
       )
     );
 
+    Widget rowSection = Center(
+        child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+             Image.asset('images/pic1.jpg'),
+             Image.asset('images/pic2.jpg'),
+             Image.asset('images/pic3.jpg'),
+            ]
+        )
+    );
+
     return MaterialApp(
       title: 'Flutter Demo',
       home: Scaffold(
@@ -100,6 +111,7 @@ class MyApp extends StatelessWidget {
             titleSection,
             buttonSection,
             textSection,
+            rowSection,
           ],
         ),
       ),
